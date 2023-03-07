@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ hello)\n/* harmony export */ });\nfunction hello() {\n    console.log(\"data.js alive!\");\n}\n\nhello()\n\n//# sourceURL=webpack://weather-app/./src/data.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getWeather\": () => (/* binding */ getWeather)\n/* harmony export */ });\nasync function getWeather(city) {\n    try{\n        let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=12ba82103cee621b422b9bd770104e91`);\n        const weatherData =  await response.json();\n        console.log(weatherData);\n\n    } catch(error) {\n        console.error(error);\n    }\n}\n\ngetWeather(\"Buenos Aires\");\n\n\n//# sourceURL=webpack://weather-app/./src/data.js?");
 
 /***/ }),
 
