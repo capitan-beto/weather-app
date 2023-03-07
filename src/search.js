@@ -6,7 +6,6 @@ let submit = document.querySelector("#submit");
 function getCity() {
     const city = input.value;
     distributeData(city);
-    console.log(city);
 }
 
 submit.addEventListener("click", () => { getCity() })
