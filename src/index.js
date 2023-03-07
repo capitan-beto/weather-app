@@ -1,4 +1,6 @@
 import "./style.css";
-import hello from "./data.js";
+import { getWeather } from "./data.js";
+import * as content from "./content.js";
+import * as search from "./search.js";
 
-console.log("index.js alive");
+
