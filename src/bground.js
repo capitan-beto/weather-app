@@ -55,7 +55,6 @@ export function getBground(data) {
 }
 
 function setBground(data) {
-    console.log(images[data].src);
     document.body.style.background = `url(${images[data].src})`;
     document.body.style.backgroundSize = "cover";
 }

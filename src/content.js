@@ -8,7 +8,8 @@ export async function distributeData(city) {
         displayLoading();
         const data = await getWeather(city);
         getBground(data);
-        createTitle(data, content);
+        showTitle(data, content);
+        showTemp(data, content);
         displayLoading();
     }
     catch (err) {
@@ -17,11 +18,22 @@ export async function distributeData(city) {
     }
 };
 
-function createTitle(data, parent) {
+function showTitle(data, parent) {
     const title = document.querySelector(".title");
     title.textContent = data.name;
+
     parent.appendChild(title);
 };
+
+function showTemp(data, parent) {
+    const currTemp = document.querySelector("curr-temp")
+    console.log(typeof data.main.temp)
+    // currTemp.textContent = data.main.temp.toString();;
+
+    parent.append(currTemp);
+}
+
+
 
 
 function displayLoading() {
