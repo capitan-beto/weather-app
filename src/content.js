@@ -8,8 +8,9 @@ export async function distributeData(city) {
         displayLoading();
         const data = await getWeather(city);
         getBground(data);
-        showTitle(data, content);
-        showTemp(data, content);
+        displayTitle(data);
+        DisplayTemp(data);
+        displayMain(data);
         displayLoading();
     }
     catch (err) {
@@ -18,12 +19,12 @@ export async function distributeData(city) {
     }
 };
 
-function showTitle(data, parent) {
+function displayTitle(data) {
     const title = document.querySelector(".title");
     title.textContent = data.name;
 };
 
-function showTemp(data, parent) {
+function DisplayTemp(data) {
     const currTemp = document.querySelector(".curr-temp")
     const maxTemp = document.querySelector(".max-temp");
     const minTemp = document.querySelector(".min-temp")
@@ -32,6 +33,12 @@ function showTemp(data, parent) {
     maxTemp.textContent = `Max: ${data.main.temp_max}°`;
     minTemp.textContent = `Min: ${data.main.temp_min}°`;
 }
+
+function displayMain(data) {
+    const main = document.querySelector(".main");
+    main.textContent = data.weather[0].description;
+}
+
 
 
 
