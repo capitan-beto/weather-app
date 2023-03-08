@@ -11,6 +11,7 @@ export async function distributeData(city) {
         displayTitle(data);
         DisplayTemp(data);
         displayMain(data);
+        displayWind(data);
         displayLoading();
     }
     catch (err) {
@@ -37,6 +38,11 @@ function DisplayTemp(data) {
 function displayMain(data) {
     const main = document.querySelector(".main");
     main.textContent = data.weather[0].description;
+}
+
+function displayWind(data) {
+    const wind = document.querySelector(".wind");
+    wind.textContent = `Wind: ${data.wind.speed}m/s`;
 }
 
 
