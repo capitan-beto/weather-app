@@ -21,16 +21,16 @@ export async function distributeData(city) {
 function showTitle(data, parent) {
     const title = document.querySelector(".title");
     title.textContent = data.name;
-
-    parent.appendChild(title);
 };
 
 function showTemp(data, parent) {
-    const currTemp = document.querySelector("curr-temp")
-    console.log(typeof data.main.temp)
-    // currTemp.textContent = data.main.temp.toString();;
+    const currTemp = document.querySelector(".curr-temp")
+    const maxTemp = document.querySelector(".max-temp");
+    const minTemp = document.querySelector(".min-temp")
 
-    parent.append(currTemp);
+    currTemp.textContent = `${data.main.temp}°`;
+    maxTemp.textContent = `Max: ${data.main.temp_max}°`;
+    minTemp.textContent = `Min: ${data.main.temp_min}°`;
 }
 
 
