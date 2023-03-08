@@ -4,7 +4,8 @@ export async function getWeather(city) {
     try {
         let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=12ba82103cee621b422b9bd770104e91`);
         if (!response.ok) {
-            console.log("city not found")
+            console.log("city not found");
+            //Error Screen here.
         }
         const weatherData =  await response.json();
         return weatherData;
@@ -33,11 +34,11 @@ export  async function getUserLocation() {
 
 export async function getUserCity(lat, long) {
     try {
-        let response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${long}&key=AIzaSyBh3Cq_gKvdOZZdssYD9D4gdYf18WPd7L8`, {mode: "cors"});
+        let response = await fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}8&lon=${long}&limit=1&appid=12ba82103cee621b422b9bd770104e91`)
         let data = await response.json();
-        distributeData(data.results[0].address_components[2].long_name);
+        distributeData(data[0].name);
     } catch (error) {
+        console.warn(error);
         distributeData("Buenos Aires");
     }
 }
-
