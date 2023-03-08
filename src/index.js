@@ -7,3 +7,4 @@ import * as bground from "./bground.js";
 getUserLocation();
 
 submit.addEventListener("click", () => { search.getCity() });
+

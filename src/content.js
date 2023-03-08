@@ -1,5 +1,6 @@
 import { getBground } from "./bground";
 import { getWeather } from "./data";
+import { format } from 'date-fns'
 
 export const content = document.querySelector(".content");
 
@@ -12,6 +13,7 @@ export async function distributeData(city) {
         DisplayTemp(data);
         displayMain(data);
         displayWind(data);
+        displayDate();
         displayLoading();
     }
     catch (err) {
@@ -45,9 +47,10 @@ function displayWind(data) {
     wind.textContent = `Wind: ${data.wind.speed}m/s`;
 }
 
-
-
-
+function displayDate() {
+    const date = document.querySelector(".date");
+    date.textContent = format(new Date, 'eeee dd/MM/yyyy');
+}
 
 function displayLoading() {
     let div = document.querySelector(".loading");
