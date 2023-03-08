@@ -1,3 +1,4 @@
+import { getBground } from "./bground";
 import { getWeather } from "./data";
 
 export const content = document.querySelector(".content");
@@ -6,11 +7,13 @@ export async function distributeData(city) {
     try {
         displayLoading();
         const data = await getWeather(city);
+        getBground(data);
         createTitle(data, content);
+        console.log(data);
         displayLoading();
     }
     catch (err) {
-        console.err("error");
+        alert(error);
     }
 };
 

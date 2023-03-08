@@ -4,7 +4,7 @@ export async function getWeather(city) {
     try {
         let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=12ba82103cee621b422b9bd770104e91`);
         if (!response.ok) {
-            console.log("city not found");
+            console.log("city not found");            
             //Error Screen here.
         }
         const weatherData =  await response.json();
