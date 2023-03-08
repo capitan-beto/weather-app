@@ -9,7 +9,6 @@ export async function distributeData(city) {
         const data = await getWeather(city);
         getBground(data);
         createTitle(data, content);
-        console.log(data);
         displayLoading();
     }
     catch (err) {

@@ -10,6 +10,7 @@ body {
     transition: all 1s;
     background-repeat: no-repeat;
     backdrop-filter: blur(10px);
+    background: url(assets/backgrounds/clear-night.jpg);
 }
 
 .content {
