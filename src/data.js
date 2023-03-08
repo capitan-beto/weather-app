@@ -39,7 +39,5 @@ export async function getUserCity(lat, long) {
     } catch (error) {
         distributeData("Buenos Aires");
     }
-    // distributeData(data.results[4].address_components[0].long_name)
 }
 
-getUserLocation();
