@@ -1,31 +1,32 @@
 const images = {
     clearDay: {
         main: "Clear",
-        id: true,
+        src: "./assets/backgrounds/clear-day.jpg"
+
     },
     clearNight: {
         main: "Clear",
-        id: false
+        src: "./assets/backgrounds/clear-night.jpg"
     },
     rainDay: {
         main: "Rain",
-        id: true
+        src: "./assets/backgrounds/rain-day.jpg"
     },
     rainNight: {
         main: "Rain",
-        id: false
+        src: "./assets/backgrounds/rain-night.jpg"
     },
-    thunderstorm: {
+    Thunderstorm: {
         main: "Thunderstorm",
-        id: false
+        src: "./assets/backgrounds/thunderstorm.jpg"
     },
-    clouds: {
+    Clouds: {
         main: "Clouds",
-        id: false
+        src: "./assets/backgrounds/clouds.jpg"
     },
-    snow: {
+    Snow: {
         main: "Snow",
-        id: false
+        src: "./assets/backgrounds/snow.jpg"
     }
 
 }
@@ -52,5 +53,5 @@ export function getBground(data) {
 }
 
 function setBground() {
-    
+    console.log()
 }
