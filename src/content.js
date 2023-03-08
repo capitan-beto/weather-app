@@ -13,7 +13,8 @@ export async function distributeData(city) {
         displayLoading();
     }
     catch (err) {
-        alert(error);
+        alert(err);
+        displayLoading();
     }
 };
 

@@ -1,32 +1,32 @@
 const images = {
-    clearDay: {
+    "clearDay": {
         main: "Clear",
-        src: "./assets/backgrounds/clear-day.jpg"
+        src: "../src/assets/backgrounds/clear-day.jpg"
 
     },
-    clearNight: {
+    "clearNight": {
         main: "Clear",
-        src: "./assets/backgrounds/clear-night.jpg"
+        src: "../src/assets/backgrounds/clear-night.jpg"
     },
-    rainDay: {
+    "rainDay": {
         main: "Rain",
-        src: "./assets/backgrounds/rain-day.jpg"
+        src: "../src/assets/backgrounds/rain-day.jpg"
     },
-    rainNight: {
+    "rainNight": {
         main: "Rain",
-        src: "./assets/backgrounds/rain-night.jpg"
+        src: "../src/assets/backgrounds/rain-night.jpg"
     },
-    Thunderstorm: {
+    "Thunderstorm": {
         main: "Thunderstorm",
-        src: "./assets/backgrounds/thunderstorm.jpg"
+        src: "../src/assets/backgrounds/thunderstorm.jpg"
     },
-    Clouds: {
+    "Clouds": {
         main: "Clouds",
-        src: "./assets/backgrounds/clouds.jpg"
+        src: "../src/assets/backgrounds/clouds.jpg"
     },
-    Snow: {
+    "Snow": {
         main: "Snow",
-        src: "./assets/backgrounds/snow.jpg"
+        src: "../src/assets/backgrounds/snow.jpg"
     }
 
 }
@@ -34,24 +34,28 @@ const images = {
 export function getBground(data) {
     let main = data.weather[0].main;
     let id = data.weather[0].icon.includes("d");
+
     if (main === "Clouds" || main === "Thunderstorm" || main === "Snow") {
-        console.log(`I'm havin' ${main} boy`);
+        setBground(main);
+
     } else if (main == "Clear") {
         if(!id) {
-            console.log("Clear Night!");
+            setBground("clearNight");
         } else {
-            console.log("Clear Day!");
+            setBground("clearDay");
         }
 
     } else if(main == "Rain") {
         if (!id) {
-            console.log("Raining Night!");
+            setBground("rainNight")
         } else {
-            console.log("Rainy Day!!");
+            setBground("rainDay");
         }
     }
 }
 
-function setBground() {
-    console.log()
+function setBground(data) {
+    console.log(images[data].src);
+    document.body.style.background = `url(${images[data].src})`;
+    document.body.style.backgroundSize = "cover";
 }
