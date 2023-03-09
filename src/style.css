@@ -173,6 +173,20 @@ div::first-letter {
     grid-area: 2 / 2 / 3 / 3;
     background-color: rgb(255, 255, 255, .6);
     display: none;
+    place-items: center;
+}
+
+.error > h1 {
+    text-align: justify;
+    width: 80%;
+}
+
+.error-icon {
+    background: url(./assets/images/error-icon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 10rem;
+    height: 10rem;
 }
 
 
