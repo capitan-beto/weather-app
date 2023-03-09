@@ -15,7 +15,7 @@ export async function distributeData(city) {
         displayLoading();
     }
     catch (err) {
-        alert(err);
+        console.log(err);
         displayLoading();
     }
 };
@@ -61,7 +61,7 @@ function displayDate() {
 
 }
 
-function displayLoading() {
+export function displayLoading() {
     let div = document.querySelector(".loading");
     if(div.className.includes("visible")) {
         document.querySelector(".content").style.display = "grid";
@@ -73,3 +73,5 @@ function displayLoading() {
         div.classList.add("visible");
     }
 };
+
+

@@ -4,6 +4,7 @@ import * as content from "./content.js";
 import * as search from "./search.js";
 import * as bground from "./bground.js";
 import * as fiveDays from "./five-days.js"
+import * as errorHandler from "./error-handler.js";
 
 
 getUserLocation();
