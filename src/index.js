@@ -10,6 +10,8 @@ getUserLocation();
 
 submit.addEventListener("click", () => { search.getCity() });
 
-
-
-
+window.addEventListener("keydown", (e) => {
+    if (e.keyCode == 13 && !search.input.value == ""){
+        search.getCity();
+    }
+})

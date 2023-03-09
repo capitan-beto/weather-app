@@ -11,7 +11,7 @@ export async function distributeData(city) {
         const data = await getWeather(city);
         await getDaysWeather(data);
         getBground(data);
-        displayToFunctions(data)
+        await displayToFunctions(data)
         displayLoading();
     }
     catch (err) {
