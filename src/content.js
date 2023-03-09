@@ -30,7 +30,7 @@ function displayToFunctions(data){
 
 function displayTitle(data) {
     const title = document.querySelector(".title");
-    title.textContent = data.name;
+    title.textContent = `${data.name}, ${data.sys.country}`;
 };
 
 function DisplayTemp(data) {
