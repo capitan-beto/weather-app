@@ -168,6 +168,13 @@ div::first-letter {
     background: rgb(255, 255, 255, 1);
 }
 
+.error {
+    display: grid;
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: rgb(255, 255, 255, .6);
+    display: none;
+}
+
 
 @keyframes spin {
     from {

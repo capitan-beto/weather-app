@@ -4,10 +4,13 @@ import { errorHandler } from "./error-handler";
 export async function getWeather(city) {
     try {
         let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=12ba82103cee621b422b9bd770104e91&units=metric`);
+        if (!response.ok) {
+            errorHandler();
+        }
         const weatherData =  await response.json();
         return weatherData;
     } catch(error) {
-        console.log(error);
+        console.warn("bebeto");
         errorHandler();
     }
 }
