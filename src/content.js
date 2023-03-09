@@ -9,11 +9,12 @@ export async function distributeData(city) {
         displayLoading();
         const data = await getWeather(city);
         getBground(data);
-        displayTitle(data);
-        DisplayTemp(data);
-        displayMain(data);
-        displayWind(data);
-        displayDate();
+        displayToFunctions(data)
+        // displayTitle(data);
+        // DisplayTemp(data);
+        // displayMain(data);
+        // displayWind(data);
+        // displayDate();
         displayLoading();
     }
     catch (err) {
@@ -21,6 +22,14 @@ export async function distributeData(city) {
         displayLoading();
     }
 };
+
+function displayToFunctions(data){
+    displayTitle(data);
+    DisplayTemp(data);
+    displayMain(data);
+    displayWind(data);
+    displayDate();
+}
 
 function displayTitle(data) {
     const title = document.querySelector(".title");
