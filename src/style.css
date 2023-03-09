@@ -11,7 +11,7 @@ body {
     height: 100svh;
     display: grid;
     grid-template-columns: auto min(1000px, 95%) auto;
-    grid-template-rows: 10% min(500px ,min-content) auto;
+    grid-template-rows: 10% min(500px , 80%) auto;
     transition: all 1s;
     background-repeat: no-repeat;
     backdrop-filter: blur(10px);
@@ -85,19 +85,6 @@ body {
     display: none;
 }
 
-.search {
-    grid-area: 3 / 2 / 4 / 3;
-    display: flex;
-}
-
-#search {
-    height: min(32px, 2rem);
-}
-
-#submit {
-    height: min(32px, 2rem);
-    box-sizing: content-box;
-}
 
 .visible {
     display: block;
@@ -114,6 +101,7 @@ body {
 .five-days > div{
     width: min(95%, 400px);
     padding-left: 1rem;
+    box-sizing: border-box;
 }
 
 .one, .two, .three, .four {
@@ -128,6 +116,37 @@ h3 {
 
 div::first-letter {
     text-transform: capitalize;
+}
+
+.search {
+    grid-area: 3 / 2 / 4 / 3;
+    display: grid;
+    grid-template-rows: 50px auto;
+    grid-template-columns: auto 20% ;
+}
+
+#search {
+    border: none;
+    padding-left: 1rem;
+    font-size: 1rem;
+    background:  rgb(255, 255, 255, .6) ;
+    text-transform: uppercase;
+}
+
+#search::placeholder {
+    color: rgb(0, 0, 0, .5);
+}
+
+#submit {
+    box-sizing: content-box;
+    background: rgb(255, 255, 255, .8);
+    border: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2rem;
+}
+
+#submit:hover {
+    background: rgb(255, 255, 255, 1);
 }
 
 
