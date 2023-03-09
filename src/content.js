@@ -1,6 +1,7 @@
 import { getBground } from "./bground";
 import { getWeather } from "./data";
 import { format } from 'date-fns'
+import { getDaysWeather } from "./five-days";
 
 export const content = document.querySelector(".content");
 
@@ -8,13 +9,9 @@ export async function distributeData(city) {
     try {
         displayLoading();
         const data = await getWeather(city);
+        await getDaysWeather(data);
         getBground(data);
         displayToFunctions(data)
-        // displayTitle(data);
-        // DisplayTemp(data);
-        // displayMain(data);
-        // displayWind(data);
-        // displayDate();
         displayLoading();
     }
     catch (err) {
