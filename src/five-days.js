@@ -4,6 +4,7 @@ export async function getDaysWeather(data) {
     const result = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=12ba82103cee621b422b9bd770104e91&units=metric`);
     const forecast = await result.json();
     displayDays(forecast);
+    console.log(forecast);
 }
 
 function displayDays(forecast){
@@ -49,8 +50,8 @@ function displayThree(forecast) {
     const day = addDays(new Date(forecast.list[19].dt_txt), 1);
     date.textContent = format(day, "eeee dd");
     main.textContent = forecast.list[19].weather[0].description;
-    max.textContent = `Max: {forecast.list[19].main.temp_max}°`;
-    min.textContent = `Min: {forecast.list[19].main.temp_min}°`;
+    max.textContent = `Max: ${forecast.list[19].main.temp_max}°`;
+    min.textContent = `Min: ${forecast.list[19].main.temp_min}°`;
 }
 
 function displayFour(forecast) {

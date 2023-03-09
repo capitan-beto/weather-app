@@ -54,8 +54,11 @@ function displayWind(data) {
 }
 
 function displayDate() {
+    const day = document.querySelector(".day");
     const date = document.querySelector(".date");
-    date.textContent = format(new Date, 'eeee dd/MM/yyyy');
+    day.textContent = format(new Date, 'eeee');
+    date.textContent = format(new Date, "dd/MM/yyyy");
+
 }
 
 function displayLoading() {

@@ -6,7 +6,7 @@ body {
     margin: 0;
     height: 100svh;
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 15% 70% 15%;
     grid-template-rows: 10% min(450px ,70%) auto;
     transition: all 1s;
     background-repeat: no-repeat;
@@ -17,6 +17,38 @@ body {
 .content {
     grid-area: 2 / 2 / 3 / 3;
     background-color: white;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(4, 25%);
+    padding: .5rem 1.5rem 0;
+}
+
+.title {
+    grid-area: 1 / 1 / 2 / 3;
+    display: grid;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.icon {
+    grid-area: 1 / 4 / 2 / 6;
+    border: red solid 1px;
+}
+
+.wrapper-one {
+    grid-area: 2 / 1 / 4 / 3;
+    display: grid;
+}
+
+.wrapper-two {
+    grid-area: 2 / 4 / 4 / 6;
+    display: grid;
+    place-items: center;
+}
+
+.main {
+    display: grid;
+    place-items: center;
 }
 
 .loading {
@@ -47,10 +79,15 @@ body {
 
 }
 
-.one, .two, .three, .four, .five {
-    height: 100px;
-    width: 100px;
-    border: 1px solid red;
+.five-days {
+    display: grid;
+    grid-area: 4 / 1 / 6 / -1;
+    grid-template-columns: repeat(5, 20%);
+    place-items: center start ;
+}
+
+h3 {
+    margin: 0;
 }
 
 @keyframes spin {
