@@ -84,6 +84,14 @@ body {
     place-self: center;
 }
 
+.loading-container {
+    visibility: hidden;
+    grid-area: 2 / 2 / 3 / 3;
+    display: grid;
+    place-items: center;
+    background: rgb(255, 255, 255, .6);
+}
+
 .loading {
     height: 64px;
     width: 64px;
@@ -94,8 +102,8 @@ body {
 
 
 .visible {
-    display: block;
     animation: spin .5s infinite linear;
+    display: block;
 }
 
 .five-days {

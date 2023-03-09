@@ -11,3 +11,5 @@ getUserLocation();
 submit.addEventListener("click", () => { search.getCity() });
 
 
+
+

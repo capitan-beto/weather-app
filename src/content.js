@@ -64,8 +64,12 @@ function displayDate() {
 function displayLoading() {
     let div = document.querySelector(".loading");
     if(div.className.includes("visible")) {
+        document.querySelector(".content").style.display = "grid";
+        document.querySelector(".loading-container").style.visibility = "hidden";
         div.classList.remove("visible");
     } else{
+        document.querySelector(".content").style.display = "none";
+        document.querySelector(".loading-container").style.visibility = "visible";
         div.classList.add("visible");
     }
 };
