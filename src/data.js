@@ -10,7 +10,6 @@ export async function getWeather(city) {
         const weatherData =  await response.json();
         return weatherData;
     } catch(error) {
-        console.warn("bebeto");
         errorHandler();
     }
 }

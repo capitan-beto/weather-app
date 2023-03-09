@@ -15,7 +15,6 @@ export async function distributeData(city) {
         displayLoading();
     }
     catch (err) {
-        console.log(err);
         displayLoading();
     }
 };
@@ -64,11 +63,11 @@ function displayDate() {
 export function displayLoading() {
     let div = document.querySelector(".loading");
     if(div.className.includes("visible")) {
-        document.querySelector(".content").style.display = "grid";
+        content.style.display = "grid";
         document.querySelector(".loading-container").style.visibility = "hidden";
         div.classList.remove("visible");
     } else{
-        document.querySelector(".content").style.display = "none";
+        content.style.display = "none";
         document.querySelector(".loading-container").style.visibility = "visible";
         div.classList.add("visible");
     }
