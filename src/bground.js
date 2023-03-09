@@ -1,8 +1,7 @@
-const images = {
+export const images = {
     "clearDay": {
         main: "Clear",
         src: "../src/assets/backgrounds/clear-day.jpg"
-
     },
     "clearNight": {
         main: "Clear",
@@ -20,7 +19,11 @@ const images = {
         main: "Thunderstorm",
         src: "../src/assets/backgrounds/thunderstorm.jpg"
     },
-    "Clouds": {
+    "cloudsDay": {
+        main: "Clouds",
+        src: "../src/assets/backgrounds/clouds.jpg"
+    },
+    "cloudsNight": {
         main: "Clouds",
         src: "../src/assets/backgrounds/clouds.jpg"
     },
@@ -35,8 +38,15 @@ export function getBground(data) {
     let main = data.weather[0].main;
     let id = data.weather[0].icon.includes("d");
 
-    if (main === "Clouds" || main === "Thunderstorm" || main === "Snow") {
+    if (main == "Thunderstorm" || main == "Snow") {
         setBground(main);
+
+    } else if(main == "Clouds") {
+        if(!id) {
+            setBground("cloudsNight");
+        } else {
+            setBground("cloudsDay");
+        }
 
     } else if (main == "Clear") {
         if(!id) {
