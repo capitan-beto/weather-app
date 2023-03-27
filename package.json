@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
-    "build": "webpack"
+    "build": "webpack",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/Otroletravaladna/weather-app/issues"
   },
-  "homepage": "https://github.com/Otroletravaladna/weather-app#readme",
+  "homepage": "http://capitan-beto.github.io/weather-app",
   "devDependencies": {
     "css-loader": "^6.7.3",
     "dotenv": "^16.0.3",
