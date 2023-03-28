@@ -198,3 +198,60 @@ div::first-letter {
         transform: rotate(360deg);
     }
 }
+
+#rain-day {
+    background: url("./assets/backgrounds/rain-day.jpg");
+}
+
+#rain-night {
+    background: url("../src/assets/backgrounds/rain-night.jpg");
+}
+
+#snow {
+    background: url("../src/assets/backgrounds/snow.jpg");
+}
+
+#clouds {
+    background: url("../src/assets/backgrounds/clouds.jpg");   
+}
+
+#thunderstorm {
+    background: url("../src/assets/backgrounds/thunderstorm.jpg");
+}
+
+#clear-night {
+    background: url("../src/assets/backgrounds/clear-night.jpg");
+}
+
+
+#clear-day {
+    background-image: url("../src/assets/backgrounds/clear-day.jpg");
+} 
+
+#icon-clear-day {
+    background: url("../src/assets/icons/clear-day.svg");
+}
+
+#icon-clear-night {
+    background: url("../src/assets/icons/clear-night.svg");
+}
+
+#icon-rain {
+    background: url("../src/assets/icons/rain.svg");
+}
+
+#icon-thunderstorm {
+    background: url("../src/assets/icons/thunderstorm.svg");
+}
+
+#icon-clouds-day {
+    background: url("../src/assets/icons/clouds-day.svg");
+}
+
+#icon-clouds-night {
+    background: url("../src/assets/icons/clouds-night.svg");
+}
+
+#icon-snow {
+    background: url("../src/assets/icons/snow.svg");
+}

@@ -16,4 +16,3 @@ window.addEventListener("keydown", (e) => {
         search.getCity();
     }
 })
-console.log("actually doing something");
