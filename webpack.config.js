@@ -14,13 +14,9 @@ module.exports = {
             use: ['style-loader', 'css-loader'],
           },
           {
-            test: /\.(png|svg|jpg|jpeg|gif)$/i,
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'images',
-              publicPath: 'images',
-            },
+            test: /\.(png|jpe?g|gif)$/i,
+            include: path.resolve(__dirname, 'src/assets/**/*'),
+            type: 'asset/resource',
           },
         ],
       },
