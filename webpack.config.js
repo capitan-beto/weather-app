@@ -16,7 +16,6 @@ module.exports = {
           {
             test: /\.(png|jpe?g|gif)$/i,
             include: path.resolve(__dirname, 'src/assets/**/*'),
-            type: 'asset/resource',
           },
         ],
       },
